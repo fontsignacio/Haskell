@@ -50,6 +50,13 @@ listaimpares (x:xs) = if (odd x) then x :listaimpares xs
 -- lista impares al cuadrado
 
 licv2 lista = listacuadrado (listaimpares lista)
+
+
+--longitud de una cadena
+
+longCadena :: String -> Int
+longCadena [] = 0
+longCadena (x:xs) = 1 + longCadena(xs)
 	
  
 
