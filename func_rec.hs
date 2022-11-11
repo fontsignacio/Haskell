@@ -57,7 +57,24 @@ licv2 lista = listacuadrado (listaimpares lista)
 longCadena :: String -> Int
 longCadena [] = 0
 longCadena (x:xs) = 1 + longCadena(xs)
-	
+
+
+
+--Eliminar los elementos repetidos de una lista
+
+
+--eliminaRep :: String -> String
+--eliminaRep [] = []
+--eliminaRep (x:xs) = if x == xs then tail x
+
+
+-- invertir una cadena
+invertirCadena :: String -> String
+invertirCadena [] = []
+invertirCadena (x:xs) = invertirCadena xs ++ [x]
+
+
+
  
 
 
