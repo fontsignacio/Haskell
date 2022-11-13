@@ -73,6 +73,31 @@ invertirCadena :: String -> String
 invertirCadena [] = []
 invertirCadena (x:xs) = invertirCadena xs ++ [x]
 
+--Verificar si un elemento pertenece a una lista
+
+verificaElem :: Char -> String -> Bool
+verificaElem y [] = False
+verificaElem y (x:xs) | y == x = True 
+                      | otherwise = verificaElem y xs   
+
+
+--Unir dos listas de cadena de caracteres puede elementos repetidos
+
+--UnirLista :: String -> String -> String
+--UnirLista x y =  x ++ y 
+
+
+--para separar de un String las vocales.
+
+vocal y = [a,e,i,o,u]
+
+vocales :: String -> String 
+vocales (x:xs) | x == vocal x = [x] ++ " "
+
+
+ 
+
+
 
 
  
