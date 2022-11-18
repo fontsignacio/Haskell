@@ -89,12 +89,37 @@ verificaElem y (x:xs) | y == x = True
 
 --para separar de un String las vocales.
 
-vocal y = [a,e,i,o,u]
+--vocal y = [a,e,i,o,u]
 
-vocales :: String -> String 
-vocales (x:xs) | x == vocal x = [x] ++ " "
+--vocales :: String -> String 
+--vocales (x:xs) | x == vocal x = [x] ++ " "
 
 
+
+--Eliminar los elementos repetidos de una lista
+
+eliminaRep :: String -> String
+eliminaRep [] = []
+eliminaRep (x:xs) | verificaElem x xs = eliminaRep xs
+                  | otherwise = [x] ++ eliminaRep xs
+
+
+--Unir dos listas de cadena de caracteres puede elementos repetidos
+
+
+unirLista :: String -> String -> String
+unirLista [] [] = []
+unirLista [] (y:ys) = y : unirLista [] ys 
+unirLista (x:xs) y = if verificaElem x y then unirLista xs y else x : unirLista xs y  
+
+
+-- Modificar la función UnirLista de tal modo que no incluya repetidos
+--para separar de un String las vocales.
+
+--vocales :: String -> String 
+--vocales [] = []
+--vocales (x:xs) | verificaElem x "aeiou" = x : vocales xs
+--               | otherwise = vocales xs
  
 
 
