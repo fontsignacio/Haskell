@@ -116,10 +116,11 @@ unirLista (x:xs) y = if verificaElem x y then unirLista xs y else x : unirLista 
 -- Modificar la función UnirLista de tal modo que no incluya repetidos
 --para separar de un String las vocales.
 
---vocales :: String -> String 
---vocales [] = []
---vocales (x:xs) | verificaElem x "aeiou" = x : vocales xs
---               | otherwise = vocales xs
+vocales :: String -> String 
+vocales [] = []
+vocales (x:xs) | verificaElem x "aeiou" = x : vocales xs
+               | otherwise = vocales xs
+
  
 
 
