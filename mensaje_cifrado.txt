@@ -5,7 +5,9 @@
 --razonando con haskell o aprenda haskell por el bien de todos
 
 
-
+mensajeCifrado :: String -> Int 
+mensajeCifrado (x:xs) | ord x : mensajeCifrado xs
+                      | otherwise mensajeCifrado xs
 
 
 
